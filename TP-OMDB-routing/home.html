@@ -1,0 +1,34 @@
+<h2>{{ctrl.title}}</h2>
+<a ng-href="/#!/page1">Aller à la page 1</a>
+
+<form class="container">
+  <input type="text" id="titleInput" placeholder="Titre" ng-model="ctrl.searchedMovie">
+  <button type="button" ng-click="ctrl.updateSearch()">Search</button>
+</form>
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th/>
+        <th>Titre</th>
+        <th>Année</th>
+        <th>Type</th>
+        <th>Fiche film</th>
+        <th/>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="movie in ctrl.movieList">
+        <td/>
+        <td>{{movie.Title}}</td>
+        <td>{{movie.Year}}</td>
+        <td>{{movie.Type}}</td>
+        <td>
+          <a ng-href="/#!/page1/{{movie.imdbID}}">Détails</a>
+        </td>
+        </td/<
+      </tr>
+    </tbody>
+  </table>
+</div>
