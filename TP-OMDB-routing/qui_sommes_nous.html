@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Qui sommes-nous ?</title>
+	<link rel="stylesheet" href="milligram.css" />
+	<style>
+		#map {
+        	height: 400px;
+       		width: 50%;
+       }
+    </style>
+</head>
+<body>
+	<div>
+		<div id="map">
+		</div>
+		<div></div>
+	</div>
+	
+    <script>
+      function initMap() {
+        var adresse = {lat: 48.140316, lng: -1.763269};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: adresse
+        });
+        var marker = new google.maps.Marker({
+          position: adresse,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcSblP792wWAuyg1NyLA-Y7nBVk-2ZIw0&callback=initMap">
+    </script>
+
+
+</body>
+</html>
