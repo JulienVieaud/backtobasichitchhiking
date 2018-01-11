@@ -37,50 +37,51 @@
 <body>
 
   <h1>Qui sommes-nous ?</h1>
-  <div class="content">
+  <div class="profil-content">
     <div class="block" id="map"></div>
     <div class="block">
-        <p><strong>Siège social :</strong>
-          <br />1 boulevard du Trieux 35740 Pacé
-          <br />toto
-          <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.
-        </p>
-      </div>
-     </div>
-     <div>
-       <div class="profil-content">
+      <p><strong>Siège social :</strong>
+      <br />1 boulevard du Trieux 35740 Pacé
+      <br />toto
+      <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="profil-content">
       <div class="profil-block">
         <img class="profil-img" src="./Pictures/chat1.jpg">
       </div>
       <div class="profil-block">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.</p>
       </div>
-     </div>
-     <div class="profil-content">
+    </div>
+    <div class="profil-content">
       <div class="profil-block">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.</p>
       </div>
       <div class="profil-block">
         <img class="profil-img" src="./Pictures/chat2.jpg">
       </div>        
-      </div>
-     </div> 
+    </div>
+  </div> 
      
-    <script>
-      function initMap() {
-        var adresse = {lat: 48.140316, lng: -1.763269};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: adresse
-        });
-        var marker = new google.maps.Marker({
-          position: adresse,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
+  <script>
+    function initMap() {
+    var adresse = {lat: 48.140316, lng: -1.763269};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: adresse
+      });
+    var marker = new google.maps.Marker({
+      position: adresse,
+       map: map
+      });
+    }
+  </script>
+  <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcSblP792wWAuyg1NyLA-Y7nBVk-2ZIw0&callback=initMap">
-    </script>
+  </script>
 </body>
 </html>
