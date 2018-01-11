@@ -1,34 +1,115 @@
-<h2>{{ctrl.title}}</h2>
-<a ng-href="/#!/page1">Aller à la page 1</a>
 
-<form class="container">
-  <input type="text" id="titleInput" placeholder="Titre" ng-model="ctrl.searchedMovie">
-  <button type="button" ng-click="ctrl.updateSearch()">Search</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-<div class="container">
-  <table>
-    <thead>
-      <tr>
-        <th/>
-        <th>Titre</th>
-        <th>Année</th>
-        <th>Type</th>
-        <th>Fiche film</th>
-        <th/>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="movie in ctrl.movieList">
-        <td/>
-        <td>{{movie.Title}}</td>
-        <td>{{movie.Year}}</td>
-        <td>{{movie.Type}}</td>
-        <td>
-          <a ng-href="/#!/page1/{{movie.imdbID}}">Détails</a>
-        </td>
-        </td/<
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+  <title>Co-mute</title>
+  <meta name="description" content="Description de ma page">
+
+
+  <link rel="image_src" href="./image/...png">
+  <link rel="canonical" href="index.html">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen">
+
+<link rel='stylesheet' href= "./stylesheet/main.css">
+<!--
+<link rel="icon" href="./images/fabicon.png">
+-->
+<style>
+  .block {
+    vertical-align: top;
+    display: inline-block;
+    height: 400px;
+      width: 400px;
+      padding: 5px;
+  }
+  .profil-block {
+    vertical-align: middle;
+    display: inline-block;
+    height: auto;
+      width: 300px;
+      padding: 5px;
+  }
+  .profil-img{
+    float: none;
+    overflow:hidden;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    width:150px;
+    height:150px;
+  }
+  .profil-content{
+    text-align:center;
+    margin: 20px;
+  }
+</style>
+
+
+</head>
+
+<body>
+
+  <div class="profil-content">
+    <div class="profil-block">
+      <img src ="./Pictures/logo.png">
+    </div>
+    <div class="block">
+      <h1><strong>Co-mute</strong></h1>
+      <br /> <strong>Rouler en silence</strong>
+          </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="profil-content">
+      <div class="profil-block">
+        <img class="profil-img" style="background:url(./Pictures/logo-provisoir.png) no-repeat 0px 0px;">
+      </div>
+      <div class="profil-block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.</p>
+      </div>
+    </div>
+    <div class="profil-content">
+      <div class="profil-block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.</p>
+      </div>
+      <div class="profil-block" >
+        <img class="profil-img" style="background:url(./Pictures/logo-provisoir.png) no-repeat 0px 0px;">
+      </div>
+    </div>
+  </div>
+
+
+
+<footer id="footer">
+  <div>
+    <h3>Plan du site</h3>
+    <ul class="listeDuPlan">
+      <li class="listeDuPlan">Accueil</li>
+      <li class="listeDuPlan">Qui sommes nous ?</li>
+      <li class="listeDuPlan">Enregistrement </li>
+    </ul>
+  </div>
+  <div class="container"> ©2017 Ma société | Tous droits réservés</div>
+</footer>
+
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js">
+</script>
+
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous">
+</script>
+
+<script
+src="./scripts/main.js">
+</script>
+
+</body>
+</html>
