@@ -1,27 +1,27 @@
+
 function creerCompte(){
 
+	var autorisationLogin = true;
 	var autorisationPassword = true;
-	var login=document.getElementById("login").value;
-	var password=document.getElementById("password").value;
+	var login = document.getElementById("login").value;
+	var password = document.getElementById("password").value;
 
-
+	if (login == "") {
+		console.log("Login vide : Veuillez insérer une adresse e-mail valide");
+		autorisationLogin = false;
+	}
 	if (password == "") {
 		console.log("Password vide : Veuillez insérer un mot de passe valide");
 		autorisationPassword = false;
 	}
-
-	if (autorisationPassword == true) {
-
-		var user={login:login, password:password};
-		var listUser=JSON.parse(localStorage.getItem("listUser"));
-		if(listUser==null){
-			listUser=[]
+	if (autorisationPassword == true && autorisationLogin == true) {
+		var user = {login:login, password:password};
+		var listUser = JSON.parse(localStorage.getItem("listUser"));
+		if(listUser == null){
+			listUser = []
 		}
-
 		testerDoublonUser(listUser, user)
-
-		if(testerDoublonUser(listUser, user)==false){
-
+		if(testerDoublonUser(listUser, user) == false){
 			listUser.push(user);
 			localStorage.setItem('listUser',JSON.stringify(listUser));
 			localStorage.setItem('user', user);
@@ -42,6 +42,6 @@ function testerDoublonUser(listUser, user){
 	if (testDoublonUserKO == false) {
 		console.log(user.login + " : OK - Nouveau compte");
 	}
-
 	return testerDoublonUser;
 }
+
