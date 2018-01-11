@@ -18,48 +18,84 @@
 <!--
 <link rel="icon" href="./images/fabicon.png">
 -->
+<style>
+  .block {
+    vertical-align: top;
+    display: inline-block;
+    height: 400px;
+      width: 400px;
+      padding: 5px;
+  }
+  .profil-block {
+    vertical-align: middle;
+    display: inline-block;
+    height: auto;
+      width: 300px;
+      padding: 5px;
+  }
+  .profil-img{
+    float: none;
+    overflow:hidden;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    width:150px;
+    height:150px;
+  }
+  .profil-content{
+    text-align:center;
+    margin: 20px;
+  }
+</style>
+
 
 </head>
 
 <body>
 
-  <div class="container">
-    <div id="page-content">
-      <main id="main">
-        <div>
-          <ul class="article-previews">
-            <li class="article-preview-item">
-                <div class="visual-container article-preview-section">
-                  <img class="visual" src="./Pictures/logo-provisoir.png">
-                </div>
-            </li>
-            <li class="article-preview-item">
-                  <h2>Notre entreprise</h2>
-                  <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul class="article-previews">
-            <li class="article-preview-item">
-                  <h2>Notre entreprise</h2>
-                  <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-            </li>
-            <li class="article-preview-item">
-                <div class="visual-container article-preview-section">
-                  <img class="visual" src="./Pictures/logo-provisoir.png">
-                </div>
-            </li>
-          </ul>
-        </div>
+  <div class="profil-content">
+    <div class="profil-block">
+      <img src ="./Pictures/logo.png">
+    </div>
+    <div class="block">
+      <h1><strong>Co-mute</strong></h1>
+      <br /> <strong>Rouler en silence</strong>
+          </p>
+    </div>
+  </div>
 
-</main>
-</div>
+  <div>
+    <div class="profil-content">
+      <div class="profil-block">
+        <img class="profil-img" style="background:url(./Pictures/logo-provisoir.png) no-repeat 0px 0px;">
+      </div>
+      <div class="profil-block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.</p>
+      </div>
+    </div>
+    <div class="profil-content">
+      <div class="profil-block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a imperdiet diam. Maecenas venenatis vestibulum mi non eleifend. Fusce et efficitur libero. Ut nec fermentum diam. In eget auctor enim. Morbi blandit odio id massa dignissim, eget dictum dolor consequat. Curabitur a posuere nibh.</p>
+      </div>
+      <div class="profil-block" >
+        <img class="profil-img" style="background:url(./Pictures/logo-provisoir.png) no-repeat 0px 0px;">
+      </div>
+    </div>
+  </div>
+
+
 
 <footer id="footer">
+  <div>
+    <h3>Plan du site</h3>
+    <ul class="listeDuPlan">
+      <li class="listeDuPlan">Accueil</li>
+      <li class="listeDuPlan">Qui sommes nous ?</li>
+      <li class="listeDuPlan">Enregistrement </li>
+    </ul>
+  </div>
   <div class="container"> ©2017 Ma société | Tous droits réservés</div>
 </footer>
-
 
 <script
 src="https://code.jquery.com/jquery-2.2.4.min.js">
