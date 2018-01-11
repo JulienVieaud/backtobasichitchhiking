@@ -7,11 +7,11 @@ function creerCompte(){
 	var password = document.getElementById("password").value;
 
 	if (login == "") {
-		console.log("Login vide : Veuillez insérer une adresse e-mail valide");
+		console.log("Login vide : Veuillez insï¿½rer une adresse e-mail valide");
 		autorisationLogin = false;
 	}
 	if (password == "") {
-		console.log("Password vide : Veuillez insérer un mot de passe valide");
+		console.log("Password vide : Veuillez insï¿½rer un mot de passe valide");
 		autorisationPassword = false;
 	}
 	if (autorisationPassword == true && autorisationLogin == true) {
@@ -44,4 +44,3 @@ function testerDoublonUser(listUser, user){
 	}
 	return testDoublonUserKO;
 }
-
