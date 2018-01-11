@@ -20,7 +20,7 @@ function creerCompte(){
 		if(listUser == null){
 			listUser = []
 		}
-		testerDoublonUser(listUser, user)
+
 		if(testerDoublonUser(listUser, user) == false){
 			listUser.push(user);
 			localStorage.setItem('listUser',JSON.stringify(listUser));
@@ -42,6 +42,6 @@ function testerDoublonUser(listUser, user){
 	if (testDoublonUserKO == false) {
 		console.log(user.login + " : OK - Nouveau compte");
 	}
-	return testerDoublonUser;
+	return testDoublonUserKO;
 }
 
