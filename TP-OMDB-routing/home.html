@@ -1,34 +1,183 @@
-<h2>{{ctrl.title}}</h2>
-<a ng-href="/#!/page1">Aller à la page 1</a>
 
-<form class="container">
-  <input type="text" id="titleInput" placeholder="Titre" ng-model="ctrl.searchedMovie">
-  <button type="button" ng-click="ctrl.updateSearch()">Search</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-<div class="container">
-  <table>
-    <thead>
-      <tr>
-        <th/>
-        <th>Titre</th>
-        <th>Année</th>
-        <th>Type</th>
-        <th>Fiche film</th>
-        <th/>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="movie in ctrl.movieList">
-        <td/>
-        <td>{{movie.Title}}</td>
-        <td>{{movie.Year}}</td>
-        <td>{{movie.Type}}</td>
-        <td>
-          <a ng-href="/#!/page1/{{movie.imdbID}}">Détails</a>
-        </td>
-        </td/<
-      </tr>
-    </tbody>
-  </table>
+
+  <title>Co-mute</title>
+  <meta name="description" content="Description de ma page">
+
+
+  <link rel="image_src" href="./image/...png">
+  <link rel="canonical" href="index.html">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet> media="screen">
+  <link rel='stylesheet' href= "./stylesheet/main.css">
+
+  <link rel="icon" href="./images/fabicon.png">
+
+
+</head>
+
+<body>
+
+  <h2>{{ctrl.title}}</h2>
+  <a ng-href="/#!/page1">Aller à la page 1</a>
+
+
+
+  <div class="container">
+
+    <header id="header" class="clearfix">
+      <a id="logo" href= "/" title="Ma société, spécialisée dans le domaine alpha">
+        <img width="120" alt="Logo de la société" src="./images/logo-entreprise.png">
+      </a>
+
+      <nav id ="main-nav">
+        <ul id="main-nav-list" class="list-unstyled">
+          <li class ="main-nav-item"> <a class="main-nav-link" href="./presentation" title="Présentation">Présentation</a></li>
+          <li class ="main-nav-item"> <a class="main-nav-link" href="./apropos" title="A propos">A propos</a></li>
+          <li class ="main-nav-item"> <a class="main-nav-link" href="./content" title="Content">Content</a></li>
+        </ul>
+      </nav>
+      <button id="btn-toggle-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <div id="page-content">
+      <nav id="breadcrumb">
+        <div class="container">
+          <ol id="breadcrumb-item" class="list-unstyled">
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link" href="/"></span>
+                <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                <span class = "text"></span>Accueil
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link" href="#">Ma page</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link" href="#">Ma 2e page</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link" href="#">Ma 3e page</a>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      <main id="main">
+        <div class="container">
+          <section class="panel">
+            <h1 class = "title">Titre de la page</h1>
+            <p class="descrition">Description</p>
+            <button class="btn btn-info">Cliquer ici</button>
+            <button class="btn btn-info btn-window">Action</button>
+          </section>
+
+          <ul id="article-previews" class="list-unstyled clearfix">
+            <li class="article-preview-item">
+              <a href="#" title="Voir pôle emploi" class="clearfix article-preview-link panel">
+                <div class="visual-container article-preview-section" style="background-image: url(images/pole-emploi.png">
+                  <img class="visual" src="./images/pole-emploi.png">
+                </div>
+                <div class="article-preview-section">
+                  <h2>Titre de l'article</h2>
+                  <p>Description de l'article</p>
+                </div>
+              </a>
+            </li>
+            <li class="article-preview-item container">
+              <a href="#" title="Voir m2i formation" class="clearfix article-preview-link panel">
+                <div class="visual-container article-preview-section" style="background-image: url(images/m2i-formation.png">
+                  <img class="visual" src="./images/m2i-formation.png">
+                </div>
+                <div class = "article-preview-section">
+                  <h2>Titre de l'article</h2>
+                  <p>Description de l'article</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="article-baspage">
+          <div  class="container">
+            <ul  class="list-unstyled clearfix">
+              <li class="article-preview-item-baspage">
+                <a href="#" title="titre" class="clearfix article-preview-link panel-baspage">
+                  <div class="visual-container article-preview-section" style="background-image: url(images/pole-emploi.png">
+                    <img class="visual" src="./images/pole-emploi.png">
+                  </div>
+                  <div class="article-preview-section article-preview-section-baspage title">
+                    <h2>Titre de l'article</h2>
+                    <p>Description de l'article</p>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
+        <div id="backdrop"></div>
+        <div id="window"></div>
+        <!--
+          <div style="position: relative;
+          border:1px solid #000;
+          width:300px;
+          height:300px;">
+
+          <div style="position: absolute;
+          width: 50px;
+          height: 50px;
+          background-color: #2b9b61;
+          bottom: 50px;">
+        </div>
+      </div>
+    -->
+
+
+    <!--
+      <div style="position: fixed;
+      width: 100px;
+      height: 100px;
+      background-color: #fe0000;
+      left: 300px;
+      top: 120px;">
+    </div>
+  -->
+</main>
 </div>
+
+<footer id="footer">
+  <div class="container"> ©2017 Ma société | Tous droits réservés</div>
+</footer>
+
+
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js">
+</script>
+
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous">
+</script>
+
+<script
+src="./scripts/main.js">
+</script>
+
+</body>
+</html>
