@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <title>{{ctrl.title}}</title>
   <link rel="stylesheet" href="milligram.css" />
-  <style>
-    /*#map {
+  <!-- <style>
+    #map {
           height: 400px;
           width: 400px;
-       }*/
-    </style>
+      }*/
+    </style> -->
 
     <style>
       .block {
@@ -46,11 +46,7 @@
   <h2>{{ctrl.title}}</h2>
   <div class="profil-content">
     <div class="block">
-      <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-         <ui-gmap-markers icon="'icon'" models="markers" coords="'coord'">
-         </ui-gmap-markers>
-      </ui-gmap-google-map>
-
+      <div id="map"></div>
     </div>
     <div class="block">
       <p><strong>Siège social :</strong>
@@ -79,5 +75,19 @@
       </div>
     </div>
   </div>
+
+  <script>
+  function initMap() {
+        var Rennes = {lat: -48.140316, lng: -1.763269};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: Rennes
+        });
+        var marker = new google.maps.Marker({
+          position: Rennes,
+          map: map
+        });
+      }
+    </script>
 </body>
 </html>
